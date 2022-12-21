@@ -1,0 +1,60 @@
+﻿@page
+@model BooksDemoRazor.Pages.Books.IndexModel
+@{
+
+    ViewData["Title"] = "Kitaplar";
+
+    
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div>
+        <h1 class="text-center">Books List</h1>
+        
+        </div>
+        <div class="col-6">
+            <h3>Açıklama</h3>
+            <p>Contrary to popular belief, Lorem Ipsumfor those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        </div>
+
+
+            <div class="col-12">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Title</td>
+                        <td>Published Year</td>
+                        <td><a autofocus asp-page="create" class="btn btn-primary">CREATE</a></td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var book in Model.Books)
+                        {
+                            <tr>
+                                <td width="10%">@book.Id</td>
+                                <td width="50">@book.Title</td>
+                                <td width="20">@book.PublishedYear</td>
+                                
+                                <td width="20">
+                                    
+                                    <div>
+                                        <a asp-page="Edit" asp-route-id="@book.Id" class="btn btn-primary mx-2">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a asp-page="Delete" asp-route-id="@book.Id" class="btn btn-primary mx-2">
+                                            <i class="bi bi-x-square"></i>
+                                       </a>
+                                     </div>
+                                </td>
+                            </tr>
+                        }
+                </tbody>   
+            </table>
+            </div>
+    </div>
+</div>

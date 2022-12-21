@@ -1,0 +1,32 @@
+﻿@page
+@model BooksDemoRazor.Pages.Books.CreateModel
+@{
+}
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Create Book</h2>
+            <hr/>
+        </div>
+        
+        <div class="mb-3">     
+            <label asp-for="Book.Title"></label>
+            <input asp-for="Book.Title" type="text" name="title" class="form-control"/>
+            <span asp-validation-for="Book.Title" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Book.PublishedYear"></label>
+            <input asp-for="Book.PublishedYear" type="number" name="publishedYear"/>
+            <span asp-validation-for="Book.PublishedYear" class="text-danger"></span>
+        </div>
+
+        <button class="m-lg-6" type="submit" style="width:150px">Create</button>
+    </div>
+</form>
+
+
+
+

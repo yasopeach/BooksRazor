@@ -1,0 +1,26 @@
+﻿@page
+@model BooksDemoRazor.Pages.Books.EditModel
+@{
+}
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Edit Book</h2>
+            <hr/>
+
+        </div>
+        
+        <div class="mb-3">
+            Title :
+            <input asp-for="Book.Title" type="text" name="title"/>
+        </div>
+        <div class="mb-3">
+            Year :
+            <input asp-for="Book.PublishedYear" type="number" name="publishedYear"/>
+        </div>
+
+        <button class="m-lg-6" type="submit" style="width:150px">SAVE</button>
+    </div>
+</form>

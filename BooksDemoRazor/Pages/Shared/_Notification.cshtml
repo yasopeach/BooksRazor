@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    if(TempData["basariliKayitGiris"] != null)
+    {
+        <p class="text-success">@TempData["basariliKayitGiris"]</p>
+    }
+
+    if(TempData["basariliKayitGuncelleme"] != null)
+    {
+        <p class="text-primary">@TempData["basariliKayitGuncelleme"]</p>
+    }
+
+    if(TempData["basariliKayitSilme"] != null)
+    {
+        <p class="text-danger">@TempData["basariliKayitSilme"]</p>
+    }
+}
